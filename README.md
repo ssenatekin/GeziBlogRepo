@@ -1,0 +1,3 @@
+# GeziBlogRepo
+Hi everyone. This is my first read.me file. I'll fix this file at so near time.
+Good luck, happy new year... 
