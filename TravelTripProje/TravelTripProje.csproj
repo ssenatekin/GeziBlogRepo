@@ -301,7 +301,8 @@
     <Content Include="Views\iletisim\MesajEkle.cshtml" />
     <Content Include="Views\Admin\MesajListesi.cshtml" />
     <Content Include="Views\Admin\MesajGetir.cshtml" />
-    <Content Include="Views\Admin\HakkimdaGetir.cshtml" />
+    <Content Include="Views\Admin\HakkimdaListe.cshtml" />
+    <Content Include="Views\Admin\HakkimdaBul.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

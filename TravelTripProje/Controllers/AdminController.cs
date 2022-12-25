@@ -15,7 +15,7 @@ namespace TravelTripProje.Controllers
         public ActionResult Index()
         {
             var degerler = c.Blogs.ToList();
-            var deger=0;
+          
             return View(degerler);
         }
         [HttpGet]
@@ -95,18 +95,23 @@ namespace TravelTripProje.Controllers
             var il = c.iletisims.Find(id);
             return View("MesajGetir", il);
         }
-        public ActionResult HakkimdaGetir(int id)
+        public ActionResult HakkimdaListe()
+        {
+            var hakkimda = c.Hakkimdas.ToList();
+            return View(hakkimda);
+        }
+        public ActionResult HakkimdaBul(int id)
         {
             var hk = c.Hakkimdas.Find(id);
-            return View("HakkimdaGetir", hk);
+            return View("HakkimdaBul", hk);
         }
-        public ActionResult Hakkimda(Hakkimda h)
+        public ActionResult HakkimdaGetir(Hakkimda h)
         {
-            var hak = c.Hakkimdas.Find(h);
+            var hak = c.Hakkimdas.Find(h.ID);
             hak.FotoUrl = h.FotoUrl;
             hak.Aciklama = h.Aciklama;
             c.SaveChanges();
-            return RedirectToAction("Hakkimda");
+            return RedirectToAction("HakkimdaListe");
         }
 
     }

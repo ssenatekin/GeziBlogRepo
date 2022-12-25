@@ -1,16 +1,16 @@
 ﻿@model TravelTripProje.Models.Sınıflar.Hakkimda
 @{
-    ViewBag.Title = "HakkimdaGetir";
+    ViewBag.Title = "HakkimdaBul";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
+<h2>HakkimdaBul</h2>
 <h2>Hakkımda Güncelleme Sayfası</h2>
 <br />
-@using (Html.BeginForm("Hakkimda", "Admin", FormMethod.Post))
+@using (Html.BeginForm("HakkimdaGetir", "Admin", FormMethod.Post))
 {
     @Html.LabelFor(x => x.ID)
-    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     @Html.LabelFor(x => x.FotoUrl)
     @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
@@ -20,4 +20,3 @@
     <br />
     <button class="btn btn-success"> Hakkımda Güncelle </button>
 }
-

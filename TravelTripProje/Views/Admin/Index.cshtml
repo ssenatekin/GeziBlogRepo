@@ -13,7 +13,6 @@
         <th>Başlık </th>
         <th>Sil </th>
         <th>Güncelle </th>
-        <th>Detaylar</th>
     </tr>
     @foreach (var x in Model)
     {
@@ -22,7 +21,6 @@
         <td>@x.Baslik</td>
         <td><a href="/Admin/BlogSil/@x.ID" class="btn btn-danger">Sil</a></td>
         <td><a href="/Admin/BlogGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
-        <td><a href="#" class="btn btn-default">Detaylar</a></td>
     </tr>
     }
 </table>
